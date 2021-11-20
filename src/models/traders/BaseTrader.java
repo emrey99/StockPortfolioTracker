@@ -6,7 +6,7 @@ public class BaseTrader implements Trader {
     private String name;
     private int budget;
 
-    protected BaseTrader(int id,String name,int budget){
+    public BaseTrader(int id, String name, int budget){
         this.setId(id);
         this.setName(name);
         this.setBudget(budget);
