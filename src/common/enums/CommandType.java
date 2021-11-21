@@ -1,4 +1,7 @@
 package common.enums;
 
-public class CommandType {
+public enum  CommandType {
+
+    addTrader,
+
 }
