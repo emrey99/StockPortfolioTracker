@@ -1,5 +1,7 @@
 package models.stocks;
 
+import static common.constants.ExceptionMessages.*;
+
 public class BaseStock implements Stock {
 
     String name;
@@ -13,29 +15,41 @@ public class BaseStock implements Stock {
     }
 
     public void setName(String name) {
+        if (name == null || name.trim().isEmpty()){
+            throw new IllegalArgumentException(INVALID_STOCK_NAME);
+        }
+
         this.name = name;
     }
 
     public void setPrice(double price) {
+        if (price <= 0){
+            throw new IllegalArgumentException(INVALID_STOCK_PRICE);
+        }
+
         this.price = price;
     }
 
     public void setQuantity(int quantity) {
+        if (quantity <= 0){
+            throw new IllegalArgumentException(INVALID_QUANTITY);
+        }
+
         this.quantity = quantity;
     }
 
     @Override
     public String getName() {
-        return null;
+        return name;
     }
 
     @Override
     public double getPrice() {
-        return 0;
+        return price;
     }
 
     @Override
     public int getQuantity() {
-        return 0;
+        return quantity;
     }
 }
