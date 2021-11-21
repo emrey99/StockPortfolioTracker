@@ -1,5 +1,7 @@
 package models.traders;
 
+import static common.constants.ExceptionMessages.*;
+
 public class BaseTrader implements Trader {
 
     private int id;
@@ -19,6 +21,10 @@ public class BaseTrader implements Trader {
     }
 
     public void setId(int id) {
+        if (id <= 0){
+            throw new IllegalArgumentException(INVALID_TRADER_ID);
+        }
+
         this.id = id;
     }
 
@@ -28,6 +34,10 @@ public class BaseTrader implements Trader {
     }
 
     public void setName(String name) {
+        if (name == null || name.trim().isEmpty()){
+            throw new IllegalArgumentException(INVALID_TRADER_NAME);
+        }
+
         this.name = name;
     }
 
@@ -37,6 +47,10 @@ public class BaseTrader implements Trader {
     }
 
     public void setBudget(int budget) {
+        if (budget <= 0){
+            throw new IllegalArgumentException(INVALID_BUDGET);
+        }
+
         this.budget = budget;
     }
 }
