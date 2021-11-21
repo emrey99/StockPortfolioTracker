@@ -8,5 +8,6 @@ public class ExceptionMessages {
     public static final String INVALID_QUANTITY = "Quantity can not be less or equal than 0.";
     public static final String INVALID_STOCK_PRICE = "Price can not be less or equal than 0.";
     public static final String INVALID_STOCK_NAME = "Stock can not be empty.";
+    public static final String EXISTING_TRADER = "Trader already exists.";
 
 }

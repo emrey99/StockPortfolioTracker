@@ -1,10 +1,14 @@
 package core;
 
+
 import core.interfaces.Controller;
 import models.traders.BaseTrader;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import static common.constants.ExceptionMessages.*;
+import static common.constants.OutputMessages.*;
 
 public class ControllerImpl implements Controller {
 
@@ -17,14 +21,19 @@ public class ControllerImpl implements Controller {
 
     @Override
     public String addTrader(int id, String name, int budget) {
-        if (traders.getClass().getSimpleName().contains(name)) {
-            throw new IllegalArgumentException("ranodm");
-        }
 
+        checkTraderId(id);
         BaseTrader trader = new BaseTrader(id, name, budget);
         traders.put(id,trader);
-        return "Successfully added";
+        return TRADER_ADDED;
 
+    }
+
+    public void checkTraderId(int id){
+
+        if (traders.containsKey(id)){
+            throw new IllegalArgumentException(EXISTING_TRADER);
+        }
     }
 }
 
