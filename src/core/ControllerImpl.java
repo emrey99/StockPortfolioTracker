@@ -31,7 +31,7 @@ public class ControllerImpl implements Controller {
 
     public void checkTraderId(int id){
 
-        if (traders.containsKey(id)){
+        if (this.traders.containsKey(id)){
             throw new IllegalArgumentException(EXISTING_TRADER);
         }
     }
