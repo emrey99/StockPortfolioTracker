@@ -56,7 +56,10 @@ public class EngineImpl implements Engine {
         switch (command) {
 
             case addTrader:
-                return this.controller.addTrader(Integer.parseInt(data[1]),data[0],Integer.parseInt(data[2]));
+                return this.controller.addTrader(Integer.parseInt(data[0]),data[1],Integer.parseInt(data[2]));
+            case removeTrader:
+                return this.controller.removeTrader(Integer.parseInt(data[0]));
+
 
         }
 

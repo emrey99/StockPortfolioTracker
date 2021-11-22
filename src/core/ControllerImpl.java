@@ -29,6 +29,15 @@ public class ControllerImpl implements Controller {
 
     }
 
+    @Override
+    public String removeTrader(int id) {
+
+        traders.remove(id);
+        return TRADER_REMOVED;
+
+    }
+
+
     public void checkTraderId(int id){
 
         if (this.traders.containsKey(id)){
