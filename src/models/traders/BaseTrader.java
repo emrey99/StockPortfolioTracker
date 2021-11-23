@@ -6,9 +6,9 @@ public class BaseTrader implements Trader {
 
     private int id;
     private String name;
-    private int budget;
+    private double budget;
 
-    public BaseTrader(int id, String name, int budget){
+    public BaseTrader(int id, String name, double budget){
         this.setId(id);
         this.setName(name);
         this.setBudget(budget);
@@ -42,11 +42,11 @@ public class BaseTrader implements Trader {
     }
 
     @Override
-    public int getBudget() {
+    public double getBudget() {
         return budget;
     }
 
-    public void setBudget(int budget) {
+    public void setBudget(double budget) {
         if (budget <= 0){
             throw new IllegalArgumentException(INVALID_BUDGET);
         }

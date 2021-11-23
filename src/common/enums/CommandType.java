@@ -2,6 +2,8 @@ package common.enums;
 
 public enum  CommandType {
 
-    addTrader, removeTrader,
+    addTrader,
+    removeTrader,
+    buyStock,
 
 }

@@ -6,6 +6,6 @@ public interface Trader {
 
      String getName();
 
-     int getBudget();
+     double getBudget();
 
 }

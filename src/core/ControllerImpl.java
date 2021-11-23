@@ -5,6 +5,7 @@ import core.interfaces.Controller;
 import models.traders.BaseTrader;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static common.constants.ExceptionMessages.*;
@@ -37,6 +38,23 @@ public class ControllerImpl implements Controller {
 
     }
 
+    @Override
+    public String buyStock(int traderId, String stockName, double stockPrice, int stockQuantity) {
+
+        if (!this.traders.containsKey(traderId)){
+            throw new IllegalArgumentException(NOT_EXISTING_TRADER);
+        }else{
+            double totalPriceOfStock = stockPrice * stockQuantity;
+            double currentBudget = this.traders.get(traderId).getBudget();
+            if (currentBudget < totalPriceOfStock){
+                throw new IllegalArgumentException(NOT_ENOUGH_MONEY_TO_BUY);
+                
+            }else {
+                this.traders.get(traderId).setBudget(currentBudget-totalPriceOfStock);
+            }   return STOCK_BOUGHT;
+        }
+    }
+
 
     public void checkTraderId(int id){
 
@@ -44,6 +62,7 @@ public class ControllerImpl implements Controller {
             throw new IllegalArgumentException(EXISTING_TRADER);
         }
     }
+    
 }
 
 
