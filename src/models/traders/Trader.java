@@ -1,5 +1,7 @@
 package models.traders;
 
+import models.stocks.Stock;
+
 public interface Trader {
 
      int getId();
@@ -7,5 +9,7 @@ public interface Trader {
      String getName();
 
      double getBudget();
+
+     String addStock(Stock stock);
 
 }

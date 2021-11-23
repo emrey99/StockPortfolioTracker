@@ -42,7 +42,8 @@ public class ControllerImpl implements Controller {
     }
 
     @Override
-    public String buyStock(int traderId, String stockName, double stockPrice, int stockQuantity) {
+    public String buyStock(int stockId,int traderId, String stockName, double stockPrice, int stockQuantity) {
+
 
         if (!this.traders.containsKey(traderId)){
             throw new IllegalArgumentException(NOT_EXISTING_TRADER);
@@ -54,8 +55,8 @@ public class ControllerImpl implements Controller {
                 
             }else {
                 this.traders.get(traderId).setBudget(currentBudget - totalPriceOfStock);
+
                 return STOCK_BOUGHT;
-                //TODO create a stock map
             }
         }
     }

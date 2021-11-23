@@ -60,7 +60,7 @@ public class EngineImpl implements Engine {
             case removeTrader:
                 return this.controller.removeTrader(Integer.parseInt(data[0]));
             case buyStock:
-                return this.controller.buyStock(Integer.parseInt(data[0]),data[1],Integer.parseInt(data[2]),Integer.parseInt(data[3]));
+                return this.controller.buyStock(Integer.parseInt(data[0]),Integer.parseInt(data[1]),data[2],Integer.parseInt(data[3]),Integer.parseInt(data[4]));
 
 
 
