@@ -1,5 +1,11 @@
 package models.traders;
 
+import models.stocks.BaseStock;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static common.constants.ExceptionMessages.*;
 
 public class BaseTrader implements Trader {
@@ -7,11 +13,13 @@ public class BaseTrader implements Trader {
     private int id;
     private String name;
     private double budget;
+    private List<BaseStock> stocks;
 
     public BaseTrader(int id, String name, double budget){
         this.setId(id);
         this.setName(name);
         this.setBudget(budget);
+        this.stocks = new ArrayList<>();
     }
 
 
@@ -44,6 +52,13 @@ public class BaseTrader implements Trader {
     @Override
     public double getBudget() {
         return budget;
+    }
+
+    @Override
+    public String addStock(BaseStock stock) {
+        this.stocks.add(stock);
+        return "Stock added in stocks BaseTrader class";
+
     }
 
     public void setBudget(double budget) {

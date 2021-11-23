@@ -3,6 +3,7 @@ package core;
 
 import core.interfaces.Controller;
 import models.stocks.BaseStock;
+import models.stocks.Stock;
 import models.traders.BaseTrader;
 
 import java.util.HashMap;
@@ -43,6 +44,8 @@ public class ControllerImpl implements Controller {
 
     @Override
     public String buyStock(int stockId,int traderId, String stockName, double stockPrice, int stockQuantity) {
+
+        BaseStock stock;
 
 
         if (!this.traders.containsKey(traderId)){

@@ -1,5 +1,6 @@
 package models.traders;
 
+import models.stocks.BaseStock;
 import models.stocks.Stock;
 
 public interface Trader {
@@ -10,6 +11,6 @@ public interface Trader {
 
      double getBudget();
 
-     String addStock(Stock stock);
+     String addStock(BaseStock stock);
 
 }
