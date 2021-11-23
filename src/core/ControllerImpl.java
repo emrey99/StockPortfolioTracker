@@ -58,7 +58,8 @@ public class ControllerImpl implements Controller {
                 
             }else {
                 this.traders.get(traderId).setBudget(currentBudget - totalPriceOfStock);
-
+                stock = new BaseStock(stockName,stockPrice,stockQuantity);
+                traders.get(traderId).addStock(stock);
                 return STOCK_BOUGHT;
             }
         }
