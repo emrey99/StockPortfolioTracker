@@ -2,6 +2,7 @@ package core;
 
 
 import core.interfaces.Controller;
+import models.stocks.BaseStock;
 import models.traders.BaseTrader;
 
 import java.util.HashMap;
@@ -14,9 +15,11 @@ import static common.constants.OutputMessages.*;
 public class ControllerImpl implements Controller {
 
     private Map<Integer, BaseTrader> traders;
+    private Map<Integer, BaseStock> stocks;
 
     public ControllerImpl() {
         this.traders = new HashMap<>();
+        this.stocks = new HashMap<>();
     }
 
 
@@ -50,8 +53,10 @@ public class ControllerImpl implements Controller {
                 throw new IllegalArgumentException(NOT_ENOUGH_MONEY_TO_BUY);
                 
             }else {
-                this.traders.get(traderId).setBudget(currentBudget-totalPriceOfStock);
-            }   return STOCK_BOUGHT;
+                this.traders.get(traderId).setBudget(currentBudget - totalPriceOfStock);
+                return STOCK_BOUGHT;
+                //TODO create a stock map
+            }
         }
     }
 
@@ -62,7 +67,7 @@ public class ControllerImpl implements Controller {
             throw new IllegalArgumentException(EXISTING_TRADER);
         }
     }
-    
+
 }
 
 
