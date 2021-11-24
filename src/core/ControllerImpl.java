@@ -3,12 +3,10 @@ package core;
 
 import core.interfaces.Controller;
 import models.stocks.BaseStock;
-import models.stocks.Stock;
 import models.traders.BaseTrader;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 import static common.constants.ExceptionMessages.*;
 import static common.constants.OutputMessages.*;
@@ -29,7 +27,7 @@ public class ControllerImpl implements Controller {
 
         checkTraderId(id);
         BaseTrader trader = new BaseTrader(id, name, budget);
-        traders.put(id,trader);
+        traders.put(id, trader);
         return TRADER_ADDED;
 
     }
@@ -43,35 +41,44 @@ public class ControllerImpl implements Controller {
     }
 
     @Override
-    public String buyStock(int stockId,int traderId, String stockName, double stockPrice, int stockQuantity) {
+    public String buyStock(int stockId, int traderId, String stockName, double stockPrice, int stockQuantity) {
 
         BaseStock stock;
 
-
-        if (!this.traders.containsKey(traderId)){
+        if (!this.traders.containsKey(traderId)) {
             throw new IllegalArgumentException(NOT_EXISTING_TRADER);
-        }else{
+        } else {
             double totalPriceOfStock = stockPrice * stockQuantity;
             double currentBudget = this.traders.get(traderId).getBudget();
-            if (currentBudget < totalPriceOfStock){
+            if (currentBudget < totalPriceOfStock) {
                 throw new IllegalArgumentException(NOT_ENOUGH_MONEY_TO_BUY);
-                
-            }else {
+
+            } else {
                 this.traders.get(traderId).setBudget(currentBudget - totalPriceOfStock);
-                stock = new BaseStock(stockName,stockPrice,stockQuantity);
+                stock = new BaseStock(stockName, stockPrice, stockQuantity);
                 traders.get(traderId).addStock(stock);
                 return STOCK_BOUGHT;
             }
         }
     }
 
+    @Override
+    public List<BaseTrader> theRichestTrader(double budget) {
+        return traders.values().stream()
+                .filter(c -> c.getBudget() > budget)
+                .sorted(Comparator.comparing(BaseTrader::getBudget).reversed())
+                .collect(Collectors.toList());
+    }
 
-    public void checkTraderId(int id){
 
-        if (this.traders.containsKey(id)){
+    public void checkTraderId(int id) {
+
+        if (this.traders.containsKey(id)) {
             throw new IllegalArgumentException(EXISTING_TRADER);
         }
     }
+
+
 
 }
 
