@@ -3,6 +3,8 @@ package models.traders;
 import models.stocks.BaseStock;
 import models.stocks.Stock;
 
+import java.util.List;
+
 public interface Trader {
 
      int getId();
@@ -12,5 +14,7 @@ public interface Trader {
      double getBudget();
 
      String addStock(BaseStock stock);
+
+     List<BaseStock> getStocks();
 
 }

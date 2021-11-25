@@ -57,18 +57,19 @@ public class ControllerImpl implements Controller {
                 this.traders.get(traderId).setBudget(currentBudget - totalPriceOfStock);
                 stock = new BaseStock(stockName, stockPrice, stockQuantity);
                 traders.get(traderId).addStock(stock);
+//                traders.get(traderId).getStocks().get(stockName.equals(.))
                 return STOCK_BOUGHT;
             }
         }
     }
 
-    @Override
-    public List<BaseTrader> theRichestTrader(double budget) {
-        return traders.values().stream()
-                .filter(c -> c.getBudget() > budget)
-                .sorted(Comparator.comparing(BaseTrader::getBudget).reversed())
-                .collect(Collectors.toList());
-    }
+//    @Override
+//    public String theRichestTrader(double budget) {
+//        return traders.values().stream()
+//                .filter(c -> c.getBudget() > budget)
+//                .sorted(Comparator.comparing(BaseTrader::getBudget).reversed())
+//                .collect(Collectors.toList());
+//    }
 
 
     public void checkTraderId(int id) {

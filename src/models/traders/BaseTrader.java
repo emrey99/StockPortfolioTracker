@@ -61,6 +61,11 @@ public class BaseTrader implements Trader {
 
     }
 
+    @Override
+    public List<BaseStock> getStocks() {
+        return this.stocks;
+    }
+
     public void setBudget(double budget) {
         if (budget <= 0){
             throw new IllegalArgumentException(INVALID_BUDGET);
@@ -68,4 +73,6 @@ public class BaseTrader implements Trader {
 
         this.budget = budget;
     }
+
+
 }
