@@ -6,5 +6,6 @@ public enum  CommandType {
     removeTrader,
     buyStock,
     theRichestTrader,
+    priceChange,
 
 }

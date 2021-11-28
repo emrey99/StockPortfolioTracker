@@ -63,6 +63,15 @@ public class ControllerImpl implements Controller {
         }
     }
 
+    @Override
+    public String priceChange(String stockName, float changePercentage) {
+//        for(Map.Entry<Integer,BaseTrader> entry:traders.entrySet()){
+//            System.out.println(entry.getValue().getStocks());
+//
+//        }
+//        return null;
+    }
+
 //    @Override
 //    public String theRichestTrader(double budget) {
 //        return traders.values().stream()
