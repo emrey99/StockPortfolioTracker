@@ -7,4 +7,5 @@ public interface Stock {
     double getPrice();
 
     int getQuantity();
+
 }
