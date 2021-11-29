@@ -75,42 +75,42 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="476" y="247" width="407" height="242" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1360.728@0.0.1360.728" timestamp="1637782237130" />
-    <state width="1316" height="235" key="GridCell.Tab.0.bottom" timestamp="1638100178039">
+    <state width="1316" height="225" key="GridCell.Tab.0.bottom" timestamp="1638110819531">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="235" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1638100178039" />
-    <state width="1316" height="235" key="GridCell.Tab.0.center" timestamp="1638100178039">
+    <state width="1316" height="225" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1638110819531" />
+    <state width="1316" height="225" key="GridCell.Tab.0.center" timestamp="1638110819531">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="235" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1638100178039" />
-    <state width="1316" height="235" key="GridCell.Tab.0.left" timestamp="1638100178039">
+    <state width="1316" height="225" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1638110819531" />
+    <state width="1316" height="225" key="GridCell.Tab.0.left" timestamp="1638110819531">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="235" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1638100178039" />
-    <state width="1316" height="235" key="GridCell.Tab.0.right" timestamp="1638100178039">
+    <state width="1316" height="225" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1638110819531" />
+    <state width="1316" height="225" key="GridCell.Tab.0.right" timestamp="1638110819531">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="235" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1638100178039" />
-    <state width="1316" height="235" key="GridCell.Tab.1.bottom" timestamp="1638100178040">
+    <state width="1316" height="225" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1638110819531" />
+    <state width="1316" height="225" key="GridCell.Tab.1.bottom" timestamp="1638110819531">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="235" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1638100178040" />
-    <state width="1316" height="235" key="GridCell.Tab.1.center" timestamp="1638100178040">
+    <state width="1316" height="225" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1638110819531" />
+    <state width="1316" height="225" key="GridCell.Tab.1.center" timestamp="1638110819531">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="235" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1638100178040" />
-    <state width="1316" height="235" key="GridCell.Tab.1.left" timestamp="1638100178039">
+    <state width="1316" height="225" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1638110819531" />
+    <state width="1316" height="225" key="GridCell.Tab.1.left" timestamp="1638110819531">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="235" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1638100178039" />
-    <state width="1316" height="235" key="GridCell.Tab.1.right" timestamp="1638100178040">
+    <state width="1316" height="225" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1638110819531" />
+    <state width="1316" height="225" key="GridCell.Tab.1.right" timestamp="1638110819531">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="235" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1638100178040" />
-    <state x="375" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1637781948947">
+    <state width="1316" height="225" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1638110819531" />
+    <state x="375" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1638199757735">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="375" y="186" key="com.intellij.ide.util.TipDialog/0.0.1360.728@0.0.1360.728" timestamp="1637781948947" />
+    <state x="375" y="186" key="com.intellij.ide.util.TipDialog/0.0.1360.728@0.0.1360.728" timestamp="1638199757735" />
     <state x="384" y="256" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1637482921528">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -131,9 +131,34 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/core/ControllerImpl.java</url>
           <line>67</line>
-          <option name="timeStamp" value="18" />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/core/EngineImpl.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/core/EngineImpl.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/core/ControllerImpl.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/core/ControllerImpl.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((BaseStock)((java.util.ArrayList)((BaseTrader)((HashMap.Node)((HashMap)((ControllerImpl)this).traders).entrySet().toArray()[0]).getValue()).stocks).get(0)).price" custom="models.stocks.BaseStock,core.ControllerImpl,models.traders.BaseTrader,java.util.HashMap,java.util.HashMap.Node,java.util.ArrayList" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

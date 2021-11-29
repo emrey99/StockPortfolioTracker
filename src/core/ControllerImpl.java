@@ -64,12 +64,24 @@ public class ControllerImpl implements Controller {
     }
 
     @Override
-    public String priceChange(String stockName, float changePercentage) {
-//        for(Map.Entry<Integer,BaseTrader> entry:traders.entrySet()){
-//            System.out.println(entry.getValue().getStocks());
-//
-//        }
-//        return null;
+    public String priceChange(String stockName, float changePercentage,String upOrDown) {
+            for(Map.Entry<Integer,BaseTrader> entry : traders.entrySet()){
+               if (stockName.equals(entry.getValue().getStocks().get(0).getName())){
+                   System.out.println(entry.getValue().getStocks().get(0).getPrice());
+
+
+
+
+
+
+                }
+
+
+
+
+
+        }
+        return null;
     }
 
 //    @Override
