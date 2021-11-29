@@ -6,7 +6,7 @@ public interface Controller {
     String removeTrader(int id);
     String buyStock(int stockId,int traderId,String stockName,double stockPrice,int stockQuantity);
 //    String theRichestTrader(double budget);
-    String priceChange(String stockName, float changePercentage,String upOrDown);
+    String priceChange(String stockName, float changePercentage);
 
 
 }

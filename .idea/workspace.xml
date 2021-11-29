@@ -107,10 +107,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state width="1316" height="225" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1638110819531" />
-    <state x="375" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1638199757735">
+    <state x="375" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1638207791505">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="375" y="186" key="com.intellij.ide.util.TipDialog/0.0.1360.728@0.0.1360.728" timestamp="1638199757735" />
+    <state x="375" y="186" key="com.intellij.ide.util.TipDialog/0.0.1360.728@0.0.1360.728" timestamp="1638207791505" />
     <state x="384" y="256" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1637482921528">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -130,7 +130,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/core/ControllerImpl.java</url>
-          <line>67</line>
+          <line>66</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

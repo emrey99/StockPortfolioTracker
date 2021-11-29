@@ -14,11 +14,11 @@ import static common.constants.OutputMessages.*;
 public class ControllerImpl implements Controller {
 
     private Map<Integer, BaseTrader> traders;
-    private Map<Integer, BaseStock> stocks;
+
 
     public ControllerImpl() {
         this.traders = new HashMap<>();
-        this.stocks = new HashMap<>();
+
     }
 
 
@@ -57,29 +57,20 @@ public class ControllerImpl implements Controller {
                 this.traders.get(traderId).setBudget(currentBudget - totalPriceOfStock);
                 stock = new BaseStock(stockName, stockPrice, stockQuantity);
                 traders.get(traderId).addStock(stock);
-//                traders.get(traderId).getStocks().get(stockName.equals(.))
                 return STOCK_BOUGHT;
             }
         }
     }
 
     @Override
-    public String priceChange(String stockName, float changePercentage,String upOrDown) {
+    public String priceChange(String stockName, float changePercentage) {
             for(Map.Entry<Integer,BaseTrader> entry : traders.entrySet()){
                if (stockName.equals(entry.getValue().getStocks().get(0).getName())){
-                   System.out.println(entry.getValue().getStocks().get(0).getPrice());
-
-
-
-
-
-
+                   double currentPrice = entry.getValue().getStocks().get(0).getPrice();
+                   double newPrice = currentPrice + (changePercentage * 10);
+                   double profit = (newPrice - currentPrice) * entry.getValue().getStocks().get(0).getQuantity();
+                   entry.getValue().setBudget(profit);
                 }
-
-
-
-
-
         }
         return null;
     }
@@ -99,11 +90,6 @@ public class ControllerImpl implements Controller {
             throw new IllegalArgumentException(EXISTING_TRADER);
         }
     }
-
-
-
-
-
 }
 
 
