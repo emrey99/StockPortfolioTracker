@@ -64,7 +64,7 @@ public class EngineImpl implements Engine {
 //            case theRichestTrader:
 //                return this.controller.theRichestTrader(Double.parseDouble(data[0]));
             case priceChange:
-                return this.controller.priceChange(data[0],Float.parseFloat(data[1]));
+                return this.controller.priceChange(data[0],Float.parseFloat(data[1]),data[2]);
 
 
 
