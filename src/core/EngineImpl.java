@@ -53,24 +53,9 @@ public class EngineImpl implements Engine {
         CommandType command = CommandType.valueOf(tokens[0]);
         String[] data = Arrays.stream(tokens).skip(1).toArray(String[]::new);
 
-        switch (command) {
+        CommandFactory commandFactory = new CommandFactory(controller, data);
 
-            case addTrader:
-                return this.controller.addTrader(Integer.parseInt(data[0]),data[1],Integer.parseInt(data[2]));
-            case removeTrader:
-                return this.controller.removeTrader(Integer.parseInt(data[0]));
-            case buyStock:
-                return this.controller.buyStock(Integer.parseInt(data[0]),Integer.parseInt(data[1]),data[2],Integer.parseInt(data[3]),Integer.parseInt(data[4]));
-//            case theRichestTrader:
-//                return this.controller.theRichestTrader(Double.parseDouble(data[0]));
-            case priceChange:
-                return this.controller.priceChange(data[0],Float.parseFloat(data[1]));
-
-
-
-        }
-
-        return null;
+        return commandFactory.from(command);
     }
 
 
